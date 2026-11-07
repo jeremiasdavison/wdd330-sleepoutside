@@ -133,6 +133,33 @@ button {
 
 /* End cart icon styles */
 
+.wishlist-link {
+  margin-left: auto;
+  padding: 1em 1em 0;
+  color: var(--dark-grey);
+  text-decoration: none;
+}
+
+.wishlist-link:hover {
+  text-decoration: underline;
+}
+
+#addToWishlist {
+  margin-top: 0.5em;
+  background-color: var(--dark-grey);
+}
+
+.wishlist-actions {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.wishlist-actions button {
+  font-size: var(--small-font);
+  padding: 0.3em 0.8em;
+  margin: 0.3em 0;
+}
+
 .mission {
   position: absolute;
   top: 1rem;

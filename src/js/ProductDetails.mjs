@@ -18,6 +18,20 @@ export default class ProductDetails {
     document
       .getElementById('addToCart')
       .addEventListener('click', this.addProductToCart.bind(this));
+    document
+      .getElementById("addToWishlist")
+      .addEventListener("click", this.addProductToWishlist.bind(this));
+  }
+
+  addProductToWishlist() {
+    const wishlist = getLocalStorage("so-wishlist") || [];
+    if (wishlist.find((item) => item.Id === this.product.Id)) {
+      alert("Already in your wishlist");
+      return;
+    }
+    wishlist.push(this.product);
+    setLocalStorage("so-wishlist", wishlist);
+    document.getElementById("addToWishlist").textContent = "Added!";
   }
 
   addProductToCart() {
